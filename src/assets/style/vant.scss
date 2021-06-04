@@ -1,0 +1,13 @@
+@import './mixin.scss';
+
+#app {
+    .van-checkbox__icon--checked .van-icon {
+        background-color: $themeColor;
+        border-color: $themeColor;
+    }
+    // step
+    .van-stepper__input{
+        // background-color:$themColor;
+        margin:0;
+    }
+}

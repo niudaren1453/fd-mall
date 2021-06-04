@@ -1,0 +1,62 @@
+@import './mixin.scss';
+
+
+
+
+// font
+.bold{
+    font-weight: bold;
+}
+.s_f{
+    font-size: 14px;
+}
+.s_f_b{
+    font-size:14px;
+    font-weight: bold;
+}
+.m_f{
+    font-size:16px;
+}
+.m_f_b{
+    font-size:16px;
+    font-weight: bold;
+}
+.l_f{
+    font-size:18px;
+}
+.l_f_b{
+    font-size:18px;
+    font-weight: bold;
+}
+.xl_f{
+    font-size: 20px;
+}
+.xl_f_b{
+    font-size:20px;
+    font-weight: bold;
+}
+
+.red{
+    color: $priceColor;
+}
+// 线条
+$var_line:left,right,bottom,top;
+@each $position in $var_line{
+    .line_#{$position}{
+        border-#{$position}:1px solid $gray
+    }
+}
+
+
+// 超出文字隐藏
+$var_text_overflow:1,2,3,4;
+@each $number in $var_text_overflow {
+    .text_overflow_#{$number}{
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $number;
+        -webkit-box-orient: vertical;
+    }
+}
